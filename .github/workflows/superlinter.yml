@@ -1,13 +1,14 @@
 name: Super-Linter
 
 # Run this workflow every time a new commit pushed to your repository
-on: push
+on: 
+  push:
+    paths-ignore:
+      - '__tests__/**.js'
 
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
-  paths-ignore:
-  - '__tests__/**'
   super-lint:
     # Name the Job
     name: Lint code base
