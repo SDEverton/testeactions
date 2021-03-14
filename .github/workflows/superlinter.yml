@@ -6,6 +6,8 @@ on: push
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
+  paths-ignore:
+  - '__tests__/**'
   super-lint:
     # Name the Job
     name: Lint code base
@@ -18,8 +20,6 @@ jobs:
         uses: actions/checkout@v2
 
       # Runs the Super-Linter action
-      paths-ignore:
-      - '__tests__/**'
       - name: Run Super-Linter
         uses: github/super-linter@v3
         env:
