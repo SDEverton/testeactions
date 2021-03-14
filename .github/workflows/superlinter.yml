@@ -4,7 +4,7 @@ name: Super-Linter
 on: 
   push:
     paths-ignore:
-      - 'src/__tests__/**.js'
+      - '**.spec.js'
 
 jobs:
   # Set the job key. The key is displayed as the job name
