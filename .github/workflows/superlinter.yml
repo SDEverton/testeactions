@@ -26,5 +26,5 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           IGNORE_GITIGNORED_FILES: true
-          FILTER_REGEX_EXCLUDE: '**.spec.js'
+          FILTER_REGEX_EXCLUDE: .*src/__tests__.*
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
