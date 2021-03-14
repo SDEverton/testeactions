@@ -3,9 +3,6 @@ name: Super-Linter
 # Run this workflow every time a new commit pushed to your repository
 on: push
 
-paths-ignore:
-    - '__tests__/**'
-
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
@@ -21,6 +18,8 @@ jobs:
         uses: actions/checkout@v2
 
       # Runs the Super-Linter action
+      paths-ignore:
+      - '__tests__/**'
       - name: Run Super-Linter
         uses: github/super-linter@v3
         env:
